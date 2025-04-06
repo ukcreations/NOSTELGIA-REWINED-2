@@ -1,0 +1,209 @@
+:root {
+    --neon-color: #ff6b6b;
+    --bg-color: #1a1a1a;
+    --text-color: #ff6b6b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.glitch-wrapper {
+    margin: 4rem 0 2rem;
+}
+
+.glitch {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #0000ff;
+    animation: glitch 725ms infinite;
+    color: var(--neon-color);
+}
+
+.subtitle {
+    color: #ffa07a;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.input-container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 2px solid var(--neon-color);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.year-input-wrapper {
+    margin-bottom: 2rem;
+}
+
+#birthYear {
+    background: transparent;
+    border: 2px solid var(--neon-color);
+    color: var(--neon-color);
+    padding: 1rem;
+    font-size: 1.5rem;
+    width: 200px;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    margin-bottom: 1rem;
+}
+
+.year-range {
+    font-size: 0.8rem;
+    color: #ffa07a;
+}
+
+.neon-button {
+    background: transparent;
+    border: 2px solid var(--neon-color);
+    color: var(--neon-color);
+    padding: 1rem 2rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.neon-button:hover {
+    background: var(--neon-color);
+    color: var(--bg-color);
+    box-shadow: 0 0 10px var(--neon-color),
+                0 0 20px var(--neon-color),
+                0 0 40px var(--neon-color);
+}
+
+.vhs-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(0, 0, 0, 0.15) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    animation: vhs-movement 10s infinite linear;
+    opacity: 0.5;
+}
+
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #0000ff;
+    }
+    14% {
+        text-shadow: 0.05em 0 0 #ff0000, -0.05em -0.025em 0 #0000ff;
+    }
+    15% {
+        text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.025em 0 #0000ff;
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 #ff0000, 0.025em 0.025em 0 #0000ff;
+    }
+    50% {
+        text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #0000ff;
+    }
+    99% {
+        text-shadow: 0.025em 0.05em 0 #ff0000, 0.05em 0 0 #0000ff;
+    }
+    100% {
+        text-shadow: -0.025em 0 0 #ff0000, -0.025em -0.025em 0 #0000ff;
+    }
+}
+
+@keyframes vhs-movement {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.category {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid var(--neon-color);
+    border-radius: 5px;
+}
+
+.category h3 {
+    color: #ffa07a;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.category li {
+    margin: 0.8rem 0;
+    font-size: 0.8rem;
+    color: #fff;
+    text-shadow: 0 0 5px var(--neon-color);
+}
+
+.loading {
+    font-size: 1.5rem;
+    color: var(--neon-color);
+    margin: 2rem 0;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+.time-capsule {
+    margin-top: 2rem;
+}
+
+.year-header {
+    font-size: 2rem;
+    color: var(--neon-color);
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px var(--neon-color);
+}

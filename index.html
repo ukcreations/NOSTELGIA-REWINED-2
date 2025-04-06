@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nostalgia Rewind - Journey Through Indian Memories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="glitch-wrapper">
+            <h1 class="glitch" data-text="Nostalgia Rewind">Nostalgia Rewind</h1>
+        </div>
+        <h2 class="subtitle">Journey Through Indian Memories</h2>
+        
+        <div class="input-container">
+            <div class="year-input-wrapper">
+                <input type="text" id="birthYear" placeholder="YYYY" maxlength="4" pattern="\d{4}">
+                <p class="year-range">Enter Your Birth Year (1970-2010)</p>
+            </div>
+            
+            <button id="timeTravel" class="neon-button">TIME TRAVEL</button>
+            <button id="randomYear" class="neon-button">RANDOM YEAR</button>
+        </div>
+
+        <div id="results" class="results-container hidden">
+            <!-- Results will be dynamically populated here -->
+        </div>
+    </div>
+
+    <div class="vhs-overlay"></div>
+    <script src="script.js"></script>
+</body>
+</html>
